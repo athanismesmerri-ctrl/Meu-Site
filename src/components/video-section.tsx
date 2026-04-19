@@ -58,7 +58,7 @@ export function VideoSection() {
               playsInline
               className="w-full transition-all duration-500 group-hover:scale-105 group-hover:blur-md"
             >
-              <source src="/preview.mp4" type="video/mp4" />
+              <source src="/video de apresentação athanis e famoors.mp4" type="video/mp4" />
             </video>
 
             {/* Subtle darkening + hover overlay */}

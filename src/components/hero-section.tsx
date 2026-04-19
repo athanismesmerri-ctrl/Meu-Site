@@ -120,7 +120,7 @@ export function HeroSection() {
         >
           <div className="relative mx-auto max-w-4xl overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-2 shadow-2xl shadow-black/40">
             <Image
-              src="/hero.jpg"
+              src="/image-1776622785668.jpeg"
               alt="Athanís Mesmerri"
               width={1920}
               height={1080}
