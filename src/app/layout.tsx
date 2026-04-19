@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Unbounded } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const inter = Inter({
@@ -15,13 +16,13 @@ const unbounded = Unbounded({
 });
 
 export const metadata: Metadata = {
-  title: "Oleg Melnikov — AI Software Entrepreneur",
+  title: "Athanís Mesmerri — Empresária, Escritora & Parapsicóloga",
   description:
-    "I quit a $650k trading career at 24 to build with AI. Now I help B2B founders become authorities and teach thousands how to build with AI on YouTube.",
+    "Fundadora da Famoors, criadora do MindCodex Method™ e autora de múltiplos livros na Amazon. Integrando ciência, comportamento e espiritualidade para transformar mentes e vidas.",
   openGraph: {
-    title: "Oleg Melnikov — AI Software Entrepreneur",
+    title: "Athanís Mesmerri — Empresária, Escritora & Parapsicóloga",
     description:
-      "I quit a $650k trading career at 24 to build with AI. Now I help B2B founders become authorities and teach thousands how to build with AI on YouTube.",
+      "Fundadora da Famoors, criadora do MindCodex Method™ e autora de múltiplos livros na Amazon. Integrando ciência, comportamento e espiritualidade para transformar mentes e vidas.",
     type: "website",
   },
 };
@@ -32,8 +33,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.className} ${unbounded.variable}`}>
-      <body>{children}</body>
+    <html lang="pt-BR" className={`${inter.className} ${unbounded.variable}`}>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
