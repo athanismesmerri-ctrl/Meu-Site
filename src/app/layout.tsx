@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className={`${inter.className} ${unbounded.variable}`}>
+    <html lang="en" className={`${inter.className} ${unbounded.variable}`}>
       <body>
         {children}
         <Analytics />
