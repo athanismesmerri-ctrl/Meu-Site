@@ -16,13 +16,13 @@ const unbounded = Unbounded({
 });
 
 export const metadata: Metadata = {
-  title: "Oleg Melnikov — AI Software Entrepreneur",
+  title: "Athanís Mesmerri — Empresária, Escritora & Parapsicóloga",
   description:
-    "I quit a $650k trading career at 24 to build with AI. Now I help B2B founders become authorities and teach thousands how to build with AI on YouTube.",
+    "Fundadora da Famoors, criadora do MindCodex Method™ e autora de múltiplos livros na Amazon. Integrando ciência, comportamento e espiritualidade para transformar mentes e vidas.",
   openGraph: {
-    title: "Oleg Melnikov — AI Software Entrepreneur",
+    title: "Athanís Mesmerri — Empresária, Escritora & Parapsicóloga",
     description:
-      "I quit a $650k trading career at 24 to build with AI. Now I help B2B founders become authorities and teach thousands how to build with AI on YouTube.",
+      "Fundadora da Famoors, criadora do MindCodex Method™ e autora de múltiplos livros na Amazon. Integrando ciência, comportamento e espiritualidade para transformar mentes e vidas.",
     type: "website",
   },
 };
