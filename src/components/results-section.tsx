@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 const stats = [
@@ -14,16 +15,22 @@ const highlights = [
     title: "MindCodex Method™",
     description:
       "Sistema exclusivo que integra neurociência, hipnose clínica e parapsicologia para reprogramar padrões mentais inconscientes e promover transformação duradoura.",
+    links: [
+      { label: "Livro na Amazon", href: "https://a.co/d/03oLia9H" },
+      { label: "Vídeo no YouTube", href: "https://www.youtube.com/watch?v=dr9qsrd5GQU&t=43s" },
+    ],
   },
   {
     title: "Famoors & NeuroVyn",
     description:
       "Fundadora da Famoors e cofundadora do NeuroVyn — empreendimentos que desenvolvem soluções inovadoras em produtos digitais, desenvolvimento pessoal e terapias energéticas.",
+    links: [],
   },
   {
     title: "Formação Multidisciplinar",
     description:
       "Hipnose clínica, neurociência, parapsicologia e diversas abordagens terapêuticas. Idealizadora do Institut Pathé na Europa. Autora de ficção e não-ficção em português e inglês.",
+    links: [],
   },
 ];
 
@@ -76,12 +83,30 @@ export function ResultsSection() {
             <motion.div
               key={h.title}
               variants={fadeUp}
-              className="rounded-2xl border border-white/10 bg-white/[0.03] p-6"
+              className="flex flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6"
             >
               <p className="text-lg font-medium">{h.title}</p>
-              <p className="mt-3 text-sm leading-relaxed text-zinc-400">
+              <p className="mt-3 flex-1 text-sm leading-relaxed text-zinc-400">
                 {h.description}
               </p>
+              {h.links.length > 0 && (
+                <div className="mt-5 flex flex-wrap gap-3">
+                  {h.links.map((link) => (
+                    <Link
+                      key={link.label}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs text-zinc-400 transition-all hover:border-white/20 hover:text-white"
+                    >
+                      {link.label}
+                      <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" className="size-3">
+                        <path d="M2 10L10 2M10 2H5M10 2v5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </Link>
+                  ))}
+                </div>
+              )}
             </motion.div>
           ))}
         </motion.div>

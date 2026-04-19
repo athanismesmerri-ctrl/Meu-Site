@@ -5,6 +5,7 @@ import { ResultsSection } from "@/components/results-section";
 import { BooksSection } from "@/components/books-section";
 import { ProductSection } from "@/components/product-section";
 import { VideoSection } from "@/components/video-section";
+import { NewsletterSection } from "@/components/newsletter-section";
 import { ConnectSection } from "@/components/connect-section";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         <BooksSection />
         <ProductSection />
         <VideoSection />
+        <NewsletterSection />
         <ConnectSection />
       </main>
     </>
