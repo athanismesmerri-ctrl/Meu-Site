@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const socials = [
   {
-    name: "youtube · athanís mesmerri",
+    name: "YouTube · Athanís Mesmerri",
     href: "https://www.youtube.com/@athanismesmerri",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="size-5">
@@ -14,7 +14,7 @@ const socials = [
     ),
   },
   {
-    name: "youtube · presença magnética",
+    name: "YouTube · Presença Magnética",
     href: "https://www.youtube.com/@presen%C3%A7amagnetica",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="size-5">
@@ -23,7 +23,7 @@ const socials = [
     ),
   },
   {
-    name: "instagram",
+    name: "Instagram · Famoors",
     href: "https://www.instagram.com/famoors/",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="size-5">
@@ -32,7 +32,7 @@ const socials = [
     ),
   },
   {
-    name: "facebook",
+    name: "Facebook · Famoors",
     href: "https://www.facebook.com/profile.php?id=61584146774796",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="size-5">
@@ -41,7 +41,7 @@ const socials = [
     ),
   },
   {
-    name: "método 7 dias",
+    name: "Método 7 Dias de Clareza e Decisão",
     href: "https://pay.hotmart.com/V103230211H?bid=1776617870922",
     icon: (
       <svg viewBox="0 0 20 20" fill="currentColor" className="size-5">
@@ -79,14 +79,14 @@ export function ConnectSection() {
           variants={fadeUp}
           className="text-sm uppercase tracking-widest text-zinc-500"
         >
-          conecte-se
+          Conecte-se
         </motion.p>
 
         <motion.p
           variants={fadeUp}
           className="mt-8 text-xl text-zinc-300 md:text-2xl"
         >
-          vamos nos conectar — estou sempre aberta a conversas e colaborações que gerem transformação.
+          Estou sempre aberta a conversas e colaborações que gerem transformação.
         </motion.p>
 
         {/* Social links */}
@@ -113,13 +113,13 @@ export function ConnectSection() {
           variants={fadeUp}
           className="mt-16 text-lg text-zinc-500"
         >
-          com amor, athanís
+          Com amor, Athanís Mesmerri
         </motion.p>
       </motion.div>
 
       {/* Footer */}
       <div className="mt-16 border-t border-white/5 pt-8 text-center text-sm text-zinc-600">
-        &copy; 2026 athanís mesmerri
+        &copy; 2026 Athanís Mesmerri
       </div>
     </section>
   );

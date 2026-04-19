@@ -5,10 +5,11 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { name: "sobre", href: "#about" },
-  { name: "resultados", href: "#results" },
-  { name: "assista", href: "#watch" },
-  { name: "conecte-se", href: "#connect" },
+  { name: "Sobre", href: "#about" },
+  { name: "Livros", href: "#livros" },
+  { name: "Produto", href: "#produto" },
+  { name: "Assista", href: "#watch" },
+  { name: "Contato", href: "#connect" },
 ];
 
 export function Header() {
@@ -33,7 +34,7 @@ export function Header() {
       >
         <div className="relative flex items-center justify-between py-3 lg:py-4">
           <Link href="/" className="text-lg font-[family-name:var(--font-unbounded)] tracking-tight">
-            athanís mesmerri
+            Athanís Mesmerri
           </Link>
 
           {/* Desktop nav */}
@@ -60,14 +61,14 @@ export function Header() {
             className="hidden lg:inline-flex items-center gap-2 rounded-lg bg-white/10 px-4 py-2 text-sm font-medium transition-colors hover:bg-white/20"
           >
             <YoutubeIcon className="size-4" />
-            youtube
+            YouTube
           </Link>
 
           {/* Mobile toggle */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="relative z-50 -m-2 p-2 lg:hidden"
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
           >
             <div className="flex flex-col gap-1.5">
               <span
@@ -114,7 +115,7 @@ export function Header() {
               className="mt-4 inline-flex items-center gap-2 rounded-lg bg-white/10 px-6 py-3 text-lg transition-colors hover:bg-white/20"
             >
               <YoutubeIcon className="size-5" />
-              youtube
+              YouTube
             </Link>
           </div>
         </div>
@@ -125,11 +126,7 @@ export function Header() {
 
 function YoutubeIcon({ className }: { className?: string }) {
   return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      className={className}
-    >
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
       <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
     </svg>
   );

@@ -23,27 +23,27 @@ export function HeroSection() {
           {/* Top label */}
           <AnimatedGroup>
             <span className="inline-block rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-zinc-400">
-              empresária · escritora · parapsicóloga
+              Empresária · Escritora · Parapsicóloga
             </span>
           </AnimatedGroup>
 
-          {/* Main heading */}
+          {/* Name as main heading */}
           <TextEffect
             as="h1"
             delay={0.2}
-            className="mx-auto mt-8 max-w-3xl text-balance text-2xl font-medium tracking-tight sm:text-3xl md:text-4xl lg:text-5xl"
+            className="mx-auto mt-8 max-w-3xl text-balance text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            integrei ciência, comportamento e espiritualidade para transformar mentes e vidas.
+            Athanís Mesmerri
           </TextEffect>
 
-          {/* Subheading */}
+          {/* Tagline */}
           <TextEffect
             as="p"
             delay={0.6}
             per="line"
             className="mx-auto mt-6 max-w-2xl text-balance text-lg text-zinc-400 md:text-xl"
           >
-            fundadora da famoors, criadora do mindcodex method e autora de múltiplos livros publicados na amazon.
+            Integrando ciência, comportamento e espiritualidade para transformar mentes, vidas e negócios.
           </TextEffect>
 
           {/* CTAs */}
@@ -72,21 +72,17 @@ export function HeroSection() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-black transition-opacity hover:opacity-90"
             >
-              assistir no youtube
+              Assistir no YouTube
               <svg viewBox="0 0 24 24" fill="currentColor" className="size-4">
                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
               </svg>
             </Link>
             <Link
-              href="#results"
+              href="#about"
               className="inline-flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-medium text-zinc-400 transition-colors hover:text-white"
             >
-              conheça meu trabalho
-              <svg
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                className="size-4"
-              >
+              Conheça minha história
+              <svg viewBox="0 0 20 20" fill="currentColor" className="size-4">
                 <path
                   fillRule="evenodd"
                   d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06z"

@@ -3,27 +3,27 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "9+", label: "livros publicados na Amazon" },
-  { value: "2", label: "canais no YouTube" },
-  { value: "3", label: "empreendimentos fundados" },
-  { value: "5+", label: "anos em hipnose clínica e parapsicologia" },
+  { value: "9+", label: "Livros publicados na Amazon" },
+  { value: "2", label: "Canais no YouTube" },
+  { value: "3", label: "Empreendimentos fundados" },
+  { value: "5+", label: "Anos em hipnose clínica e parapsicologia" },
 ];
 
 const highlights = [
   {
-    title: "mindcodex method™",
+    title: "MindCodex Method™",
     description:
-      "sistema exclusivo que integra neurociência, hipnose clínica e parapsicologia para reprogramar padrões mentais inconscientes e promover transformação duradoura.",
+      "Sistema exclusivo que integra neurociência, hipnose clínica e parapsicologia para reprogramar padrões mentais inconscientes e promover transformação duradoura.",
   },
   {
-    title: "famoors & neurovyn",
+    title: "Famoors & NeuroVyn",
     description:
-      "fundadora da famoors e cofundadora do neurovyn — empreendimentos que desenvolvem soluções inovadoras em produtos digitais, desenvolvimento pessoal e terapias energéticas.",
+      "Fundadora da Famoors e cofundadora do NeuroVyn — empreendimentos que desenvolvem soluções inovadoras em produtos digitais, desenvolvimento pessoal e terapias energéticas.",
   },
   {
-    title: "formação multidisciplinar",
+    title: "Formação Multidisciplinar",
     description:
-      "hipnose clínica, neurociência, parapsicologia e diversas abordagens terapêuticas. idealizadora do institut pathé na europa. autora de ficção e não-ficção em dois idiomas.",
+      "Hipnose clínica, neurociência, parapsicologia e diversas abordagens terapêuticas. Idealizadora do Institut Pathé na Europa. Autora de ficção e não-ficção em português e inglês.",
   },
 ];
 
@@ -43,7 +43,7 @@ export function ResultsSection() {
           variants={fadeUp}
           className="text-sm uppercase tracking-widest text-zinc-500"
         >
-          resultados
+          Atuação
         </motion.p>
 
         {/* Stats grid */}
