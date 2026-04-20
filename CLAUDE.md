@@ -1,168 +1,80 @@
-# CLAUDE.md
+# Instruções fixas do projeto
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+## Objetivo
+Este projeto é o site oficial de Athanís Mesmerri.  
+O foco é manter uma presença profissional, elegante, clara e fiel à identidade da autora, empresária e fundadora/CEO da Famoors.
 
----
+## Regras permanentes
+- Não resumir a bio sem pedir.
+- Não alterar o nome "Athanís Mesmerri".
+- Não escrever o nome em minúsculas.
+- Não remover acentos.
+- Não substituir textos reais por versões genéricas de marketing.
+- Não alterar o layout geral sem autorização.
+- Não remover seções existentes sem autorização.
+- Preservar a identidade visual e a estrutura principal do site.
+- Sempre verificar se imagem, vídeo e links estão funcionando antes de concluir.
+- Sempre validar localmente antes de encerrar a tarefa.
+- Sempre informar quais arquivos foram alterados.
 
-## What This Is
+## Identidade oficial
+Nome exibido corretamente: Athanís Mesmerri
 
-This is the workspace for **Oleg Melnikov's personal landing page** — a one-pager website that quickly communicates who Oleg is to the public world: his story, expertise, what he offers, and how to connect.
+Bio oficial:
+Eu sou Athanís Mesmerri, empresária, empreendedora digital, escritora, parapsicóloga e fundadora/CEO da Famoors.
+Meus negócios são produtos digitais, desenvolvimento pessoal, terapias energéticas e projetos editoriais, incluindo livros e materiais práticos.
+Meu histórico: sou criadora do Mindcodex Method e autora de múltiplos livros publicados na Amazon, abrangendo desenvolvimento pessoal, romance e ficção científica baseada em fatos reais. Tenho experiência em hipnose clínica, neurociência, parapsicologia e diversas abordagens terapêuticas. Sou idealizadora do Institut Pathé na Europa e, em parceria com a Famoors, cofundadora do NeuroVyn. Minha jornada explora os mistérios da mente humana, integrando ciência, comportamento e espiritualidade para promover bem-estar, transformação profunda e crescimento pessoal e empresarial.
 
-**Oleg** is an AI software entrepreneur with 5 years in AI. Former big tech (Yandex, JetBrains) and hedge fund (Amsterdam). Now runs Authority AI (helps B2B founders build authentic personal brands) and a growing YouTube channel (16.6K subs, AI for marketing tutorials).
+## Links fixos
+Site Famoors: https://www.famoors.com
+MindCodex Method: https://www.mindcodexmethod.com
+Email: mailto:info@athanismesmerri.com
+WhatsApp Business: https://wa.me/351925126637
 
-**This file (CLAUDE.md) is the foundation.** It is automatically loaded at the start of every session. Keep it current — it is the single source of truth for how Claude should understand and operate within this workspace.
+## Regras de mídia
+- Usar a foto oficial de Athanís Mesmerri, nunca imagens herdadas de projetos anteriores.
+- Remover qualquer referência residual a Oleg, oleeeg ou projeto-base anterior.
+- Verificar favicon, metadata, Open Graph, social preview, ícones e avatars.
+- Verificar se o vídeo possui áudio funcional; se não possuir faixa de áudio, informar claramente.
 
----
+## Links extras
+Vídeo hover do site: https://www.youtube.com/watch?v=ZyYAmmCXbPo
+Vídeo MindCodex Method: https://www.youtube.com/watch?v=dr9qsrd5GQU&t=43s
 
-## The Claude-User Relationship
-
-Claude operates as an **agent assistant** with access to the workspace folders, context files, commands, and outputs. The relationship is:
-
-- **User**: Defines goals, provides context about their role/function, and directs work through commands
-- **Claude**: Reads context, understands the user's objectives, executes commands, produces outputs, and maintains workspace consistency
-
-Claude should always orient itself through `/prime` at session start, then act with full awareness of who the user is, what they're trying to achieve, and how this workspace supports that.
-
----
-
-## Workspace Structure
-
-```
-.
-├── CLAUDE.md              # This file — core context, always loaded
-├── .claude/
-│   └── commands/          # Slash commands Claude can execute
-│       ├── prime.md       # /prime — session initialization
-│       ├── create-plan.md  # /create-plan — create implementation plans
-│       └── implement.md   # /implement — execute plans
-├── context/               # Background context about the user and project
-│                          # (User should populate with role, goals, strategies)
-├── plans/                 # Implementation plans created by /create-plan
-├── outputs/               # Work products and deliverables
-├── reference/             # Templates, examples, reusable patterns
-└── scripts/               # Automation scripts (if applicable)
-```
-
-**Key directories:**
-
-| Directory    | Purpose                                                                             |
-| ------------ | ----------------------------------------------------------------------------------- |
-| `context/`   | Who the user is, their role, current priorities, strategies. Read by `/prime`.      |
-| `plans/`     | Detailed implementation plans. Created by `/create-plan`, executed by `/implement`. |
-| `outputs/`   | Deliverables, analyses, reports, and work products.                                 |
-| `reference/` | Helpful docs, templates and patterns to assist in various workflows.                |
-| `scripts/`   | Any automation or tooling scripts.                                                  |
-
----
-
-## Commands
-
-### /prime
-
-**Purpose:** Initialize a new session with full context awareness.
-
-Run this at the start of every session. Claude will:
-
-1. Read CLAUDE.md and context files
-2. Summarize understanding of the user, workspace, and goals
-3. Confirm readiness to assist
-
-### /create-plan [request]
-
-**Purpose:** Create a detailed implementation plan before making changes.
-
-Use when adding new functionality, commands, scripts, or making structural changes. Produces a thorough plan document in `plans/` that captures context, rationale, and step-by-step tasks.
-
-Example: `/create-plan add a competitor analysis command`
-
-### /implement [plan-path]
-
-**Purpose:** Execute a plan created by /create-plan.
-
-Reads the plan, executes each step in order, validates the work, and updates the plan status.
-
-Example: `/implement plans/2026-01-28-competitor-analysis-command.md`
-
----
-
-## Critical Instruction: Maintain This File
-
-**Whenever Claude makes changes to the workspace, Claude MUST consider whether CLAUDE.md needs updating.**
-
-After any change — adding commands, scripts, workflows, or modifying structure — ask:
-
-1. Does this change add new functionality users need to know about?
-2. Does it modify the workspace structure documented above?
-3. Should a new command be listed?
-4. Does context/ need new files to capture this?
-
-If yes to any, update the relevant sections. This file must always reflect the current state of the workspace so future sessions have accurate context.
-
-**Examples of changes requiring CLAUDE.md updates:**
-
-- Adding a new slash command → add to Commands section
-- Creating a new output type → document in Workspace Structure or create a section
-- Adding a script → document its purpose and usage
-- Changing workflow patterns → update relevant documentation
-
----
-
-## Landing Page Goals
-
-This site should convey:
-
-- **Who Oleg is** -- AI software entrepreneur, 5 years in AI, big tech + hedge fund background, math olympiad winner
-- **The arc** -- Built AI in big tech and as an entrepreneur; now focused on AI systems for marketing
-- **What he offers** -- Authority AI (authentic personal brands for B2B founders), YouTube (AI for marketing tutorials), Skool community
-- **Social proof** -- 1M+ client views, Mike Kamo, $6.6K first deal in 14 days, 16.6K YouTube subs, 500K+ YouTube views, math/CS credentials
-- **How to connect** -- YouTube (@Oleg-Melnikov), LinkedIn (/olegai), Instagram, buildauthority.ai
-
-Key references in the main repo (`/Users/olegmelnikov/Desktop/Software Projects/oleeeg`) contain deeper context if needed.
-
----
-
-## Session Workflow
-
-1. **Start**: Run `/prime` to load context
-2. **Work**: Use commands or direct Claude with tasks
-3. **Plan changes**: Use `/create-plan` before significant additions
-4. **Execute**: Use `/implement` to execute plans
-5. **Maintain**: Claude updates CLAUDE.md and context/ as the workspace evolves
+## Entrega esperada
+Ao finalizar qualquer tarefa:
+- informar quais arquivos foram alterados;
+- validar no localhost;
+- confirmar o que foi corrigido;
+- não mexer em partes não solicitadas.
 
 ---
 
 ## Tech Stack
-
 - **Framework:** Next.js 15 + React 19 + TypeScript
 - **Styling:** Tailwind CSS 4
 - **Animations:** Framer Motion
-- **Deployment target:** Vercel
+- **Analytics:** Vercel Analytics + Speed Insights
+- **Deployment:** Vercel — repositório: https://github.com/athanismesmerri-ctrl/Meu-Site.git
 
 ### Dev Commands
-
 ```bash
 npm run dev    # Start dev server (localhost:3000)
 npm run build  # Production build
-npm run start  # Start production server
+vercel --prod  # Deploy para produção
 ```
 
-### Site Structure
+### Estrutura do site (seções em ordem)
+1. **Hero** — `hero-section.tsx` — nome, foto, label, CTAs
+2. **Sobre** — `about-section.tsx` — bio completa
+3. **Atuação** — `results-section.tsx` — stats + cards com links
+4. **Livros** — `books-section.tsx` — 9 livros com links Amazon
+5. **Produto** — `product-section.tsx` — Método 7 Dias de Clareza e Decisão
+6. **Vídeo** — `video-section.tsx` — overlay hover + botão mobile
+7. **Newsletter** — `newsletter-section.tsx` — Carta da Athanís
+8. **Conecte-se** — `connect-section.tsx` — redes + contato direto + rodapé
+9. **Header** — `header.tsx` — nav flutuante
 
-Single page with 6 sections:
-1. **Hero** — Tagline, photo, CTAs (`src/components/hero-section.tsx`)
-2. **About** — What Oleg does now (`src/components/about-section.tsx`)
-3. **Results** — Stats, client proof, credentials (`src/components/results-section.tsx`)
-4. **Video** — Looping 5s muted preview, blur + "watch on youtube" on hover (`src/components/video-section.tsx`)
-5. **Connect** — Social links + footer (`src/components/connect-section.tsx`)
-6. **Header** — Floating nav, blurs on scroll (`src/components/header.tsx`)
-
-Animation primitives in `src/components/motion/` (TextEffect, AnimatedGroup).
-
----
-
-## Notes
-
-- Keep context minimal but sufficient — avoid bloat
-- Plans live in `plans/` with dated filenames for history
-- Outputs are organized by type/purpose in `outputs/`
-- Reference materials go in `reference/` for reuse
+### Arquivos de mídia em `/public`
+- `image-1776622785668.jpeg` — foto principal (hero)
+- `video de apresentação athanis e famoors.mp4` — vídeo de apresentação (sem faixa de áudio — muted por design)
