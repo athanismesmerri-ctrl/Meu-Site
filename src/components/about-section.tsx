@@ -30,7 +30,7 @@ export function AboutSection() {
         >
           Eu sou <strong className="text-white">Athanís Mesmerri</strong>, empresária, empreendedora digital, escritora, parapsicóloga e fundadora/CEO da{" "}
           <Link
-            href="https://www.instagram.com/famoors/"
+            href="https://www.famoors.com"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white underline decoration-zinc-600 underline-offset-4 transition-colors hover:decoration-white"
