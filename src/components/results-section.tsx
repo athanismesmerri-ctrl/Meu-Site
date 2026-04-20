@@ -16,6 +16,7 @@ const highlights = [
     description:
       "Sistema exclusivo que integra neurociência, hipnose clínica e parapsicologia para reprogramar padrões mentais inconscientes e promover transformação duradoura.",
     links: [
+      { label: "Site Oficial", href: "https://www.mindcodexmethod.com" },
       { label: "Livro na Amazon", href: "https://a.co/d/03oLia9H" },
       { label: "Vídeo no YouTube", href: "https://www.youtube.com/watch?v=dr9qsrd5GQU&t=43s" },
     ],
