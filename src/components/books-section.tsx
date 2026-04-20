@@ -16,17 +16,17 @@ const books = [
   },
   {
     title: "Por Detrás dos Seus Olhos",
-    category: "Desenvolvimento Pessoal",
+    category: "Romance",
     href: "https://a.co/d/0izNoT4w",
   },
   {
     title: "O Estelionatário",
-    category: "Romance",
+    category: "Romance baseado em fatos reais",
     href: "https://a.co/d/0jcfDYis",
   },
   {
     title: "The Con Artist",
-    category: "Romance",
+    category: "Romance baseado em fatos reais",
     href: "https://a.co/d/0c2PVxkP",
   },
   {
@@ -41,12 +41,12 @@ const books = [
   },
   {
     title: "Fragmentos de Eternidade",
-    category: "Ficção Científica",
+    category: "Poemas metafísicos e políticos que atravessam a alma e inquietam a consciência",
     href: "https://a.co/d/08WQ0HnV",
   },
   {
     title: "Fragments of Eternity",
-    category: "Ficção Científica",
+    category: "Metaphysical and political poems that stir the soul and disturb the conscience",
     href: "https://a.co/d/0dKIa5uX",
   },
 ];
