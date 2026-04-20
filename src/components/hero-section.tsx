@@ -4,8 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { TextEffect } from "@/components/motion/text-effect";
 import { AnimatedGroup } from "@/components/motion/animated-group";
+import { useT } from "@/contexts/language-context";
 
 export function HeroSection() {
+  const { t } = useT();
+
   return (
     <section className="relative overflow-hidden">
       {/* Radial gradient background effects */}
@@ -23,7 +26,7 @@ export function HeroSection() {
           {/* Top label */}
           <AnimatedGroup>
             <span className="inline-block rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-zinc-400">
-              Empresária · Escritora · Parapsicóloga
+              {t.hero.label}
             </span>
           </AnimatedGroup>
 
@@ -36,14 +39,24 @@ export function HeroSection() {
             Athanís Mesmerri
           </TextEffect>
 
-          {/* Tagline */}
+          {/* Headline */}
           <TextEffect
             as="p"
-            delay={0.6}
+            delay={0.5}
             per="line"
-            className="mx-auto mt-6 max-w-2xl text-balance text-lg text-zinc-400 md:text-xl"
+            className="mx-auto mt-6 max-w-2xl text-balance text-lg text-zinc-300 md:text-xl font-medium"
           >
-            Integrando ciência, comportamento e espiritualidade para transformar mentes, vidas e negócios.
+            {t.hero.headline}
+          </TextEffect>
+
+          {/* Subtext */}
+          <TextEffect
+            as="p"
+            delay={0.8}
+            per="line"
+            className="mx-auto mt-4 max-w-2xl text-balance text-base text-zinc-500 md:text-lg"
+          >
+            {t.hero.subtext}
           </TextEffect>
 
           {/* CTAs */}
@@ -72,7 +85,7 @@ export function HeroSection() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-black transition-opacity hover:opacity-90"
             >
-              Assistir no YouTube
+              {t.hero.cta1}
               <svg viewBox="0 0 24 24" fill="currentColor" className="size-4">
                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
               </svg>
@@ -81,7 +94,7 @@ export function HeroSection() {
               href="#about"
               className="inline-flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-medium text-zinc-400 transition-colors hover:text-white"
             >
-              Conheça minha história
+              {t.hero.cta2}
               <svg viewBox="0 0 20 20" fill="currentColor" className="size-4">
                 <path
                   fillRule="evenodd"

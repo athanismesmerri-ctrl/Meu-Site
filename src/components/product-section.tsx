@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useT } from "@/contexts/language-context";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -9,6 +10,8 @@ const fadeUp = {
 };
 
 export function ProductSection() {
+  const { t } = useT();
+
   return (
     <section id="produto" className="py-24 md:py-32">
       <motion.div
@@ -19,7 +22,7 @@ export function ProductSection() {
         className="mx-auto max-w-3xl px-6"
       >
         <motion.p variants={fadeUp} className="text-sm uppercase tracking-widest text-zinc-500">
-          Produto Digital
+          {t.product.sectionTitle}
         </motion.p>
 
         <motion.div
@@ -27,13 +30,13 @@ export function ProductSection() {
           className="mt-10 rounded-2xl border border-white/10 bg-white/[0.03] p-8 md:p-10"
         >
           <p className="text-xs uppercase tracking-widest text-zinc-600">
-            Método exclusivo
+            {t.product.badge}
           </p>
           <h2 className="mt-4 text-2xl font-medium tracking-tight text-white md:text-3xl">
-            Método 7 Dias de Clareza e Decisão
+            {t.product.name}
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-zinc-400">
-            Um programa intensivo de 7 dias para eliminar a névoa mental, recuperar clareza e tomar decisões com confiança — integrando neurociência, hipnose e parapsicologia.
+            {t.product.desc}
           </p>
           <div className="mt-8">
             <Link
@@ -42,7 +45,7 @@ export function ProductSection() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-black transition-opacity hover:opacity-90"
             >
-              Acessar o Método
+              {t.product.cta}
               <svg viewBox="0 0 20 20" fill="currentColor" className="size-4">
                 <path
                   fillRule="evenodd"

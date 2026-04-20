@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useT } from "@/contexts/language-context";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -9,6 +10,8 @@ const fadeUp = {
 };
 
 export function AboutSection() {
+  const { t } = useT();
+
   return (
     <section id="about" className="py-24 md:py-32">
       <motion.div
@@ -21,14 +24,21 @@ export function AboutSection() {
         className="mx-auto max-w-3xl px-6"
       >
         <motion.p variants={fadeUp} className="text-sm uppercase tracking-widest text-zinc-500">
-          Quem sou eu
+          {t.about.title}
         </motion.p>
 
         <motion.p
           variants={fadeUp}
           className="mt-8 text-xl leading-relaxed text-zinc-300 md:text-2xl"
         >
-          Eu sou <strong className="text-white">Athanís Mesmerri</strong>, empresária, empreendedora digital, escritora, parapsicóloga e fundadora/CEO da{" "}
+          {t.about.p1}
+        </motion.p>
+
+        <motion.p
+          variants={fadeUp}
+          className="mt-6 text-xl leading-relaxed text-zinc-300 md:text-2xl"
+        >
+          {t.about.p2Pre}
           <Link
             href="https://www.famoors.com"
             target="_blank"
@@ -37,44 +47,44 @@ export function AboutSection() {
           >
             Famoors
           </Link>
-          .
+          {t.about.p2Post}
         </motion.p>
 
         <motion.p
           variants={fadeUp}
           className="mt-6 text-xl leading-relaxed text-zinc-300 md:text-2xl"
         >
-          Meus negócios são produtos digitais, desenvolvimento pessoal, terapias energéticas e projetos editoriais, incluindo livros e materiais práticos.
+          {t.about.p3}
         </motion.p>
 
         <motion.p
           variants={fadeUp}
           className="mt-6 text-xl leading-relaxed text-zinc-300 md:text-2xl"
         >
-          Sou criadora do{" "}
+          {t.about.p4Pre}
           <Link
-            href="https://a.co/d/03oLia9H"
+            href="https://www.mindcodexmethod.com"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white underline decoration-zinc-600 underline-offset-4 transition-colors hover:decoration-white"
           >
             Mindcodex Method
-          </Link>{" "}
-          e autora de múltiplos livros publicados na Amazon, abrangendo desenvolvimento pessoal, romance e ficção científica baseada em fatos reais.
+          </Link>
+          {t.about.p4Post}
         </motion.p>
 
         <motion.p
           variants={fadeUp}
           className="mt-6 text-xl leading-relaxed text-zinc-300 md:text-2xl"
         >
-          Tenho experiência em hipnose clínica, neurociência, parapsicologia e diversas abordagens terapêuticas. Sou idealizadora do Institut Pathé na Europa e, em parceria com a Famoors, cofundadora do NeuroVyn.
+          {t.about.p5}
         </motion.p>
 
         <motion.p
           variants={fadeUp}
           className="mt-6 text-xl leading-relaxed text-zinc-300 md:text-2xl"
         >
-          Minha jornada explora os mistérios da mente humana, integrando ciência, comportamento e espiritualidade para promover bem-estar, transformação profunda e crescimento pessoal e empresarial.
+          {t.about.p6}
         </motion.p>
       </motion.div>
     </section>

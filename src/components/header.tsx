@@ -3,16 +3,19 @@
 import Link from "next/link";
 import React from "react";
 import { cn } from "@/lib/utils";
+import { useT } from "@/contexts/language-context";
+import { LanguageSwitcher } from "@/components/language-switcher";
 
-const navItems = [
-  { name: "Sobre", href: "#about" },
-  { name: "Livros", href: "#livros" },
-  { name: "Produto", href: "#produto" },
-  { name: "Assista", href: "#watch" },
-  { name: "Contato", href: "#connect" },
+const navHrefs = [
+  { key: "about" as const, href: "#about" },
+  { key: "books" as const, href: "#livros" },
+  { key: "product" as const, href: "#produto" },
+  { key: "watch" as const, href: "#watch" },
+  { key: "contact" as const, href: "#connect" },
 ];
 
 export function Header() {
+  const { t } = useT();
   const [menuOpen, setMenuOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
 
@@ -40,29 +43,32 @@ export function Header() {
           {/* Desktop nav */}
           <nav className="hidden lg:block absolute inset-0 m-auto w-fit h-fit">
             <ul className="flex gap-8 text-sm">
-              {navItems.map((item) => (
-                <li key={item.name}>
+              {navHrefs.map((item) => (
+                <li key={item.key}>
                   <Link
                     href={item.href}
                     className="text-zinc-400 transition-colors hover:text-white"
                   >
-                    {item.name}
+                    {t.header.nav[item.key]}
                   </Link>
                 </li>
               ))}
             </ul>
           </nav>
 
-          {/* Desktop CTA */}
-          <Link
-            href="https://www.youtube.com/@athanismesmerri"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden lg:inline-flex items-center gap-2 rounded-lg bg-white/10 px-4 py-2 text-sm font-medium transition-colors hover:bg-white/20"
-          >
-            <YoutubeIcon className="size-4" />
-            YouTube
-          </Link>
+          {/* Desktop right: language switcher + CTA */}
+          <div className="hidden lg:flex items-center gap-3">
+            <LanguageSwitcher />
+            <Link
+              href="https://www.youtube.com/@athanismesmerri"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg bg-white/10 px-4 py-2 text-sm font-medium transition-colors hover:bg-white/20"
+            >
+              <YoutubeIcon className="size-4" />
+              {t.header.cta}
+            </Link>
+          </div>
 
           {/* Mobile toggle */}
           <button
@@ -98,14 +104,14 @@ export function Header() {
       {menuOpen && (
         <div className="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl lg:hidden">
           <div className="flex h-full flex-col items-center justify-center gap-8">
-            {navItems.map((item) => (
+            {navHrefs.map((item) => (
               <Link
-                key={item.name}
+                key={item.key}
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
                 className="text-2xl text-zinc-300 transition-colors hover:text-white"
               >
-                {item.name}
+                {t.header.nav[item.key]}
               </Link>
             ))}
             <Link
@@ -115,8 +121,11 @@ export function Header() {
               className="mt-4 inline-flex items-center gap-2 rounded-lg bg-white/10 px-6 py-3 text-lg transition-colors hover:bg-white/20"
             >
               <YoutubeIcon className="size-5" />
-              YouTube
+              {t.header.cta}
             </Link>
+            <div className="mt-2">
+              <LanguageSwitcher />
+            </div>
           </div>
         </div>
       )}

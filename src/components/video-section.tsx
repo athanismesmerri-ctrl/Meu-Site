@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useT } from "@/contexts/language-context";
 
 const VIDEO_URL = "https://www.youtube.com/watch?v=ZyYAmmCXbPo";
 
@@ -11,6 +12,8 @@ const fadeUp = {
 };
 
 export function VideoSection() {
+  const { t } = useT();
+
   return (
     <section id="watch" className="py-24 md:py-32">
       <motion.div
@@ -24,14 +27,14 @@ export function VideoSection() {
           variants={fadeUp}
           className="text-sm uppercase tracking-widest text-zinc-500"
         >
-          Assista
+          {t.video.title}
         </motion.p>
 
         <motion.p
           variants={fadeUp}
           className="mt-8 text-xl text-zinc-300 md:text-2xl"
         >
-          Compartilho conteúdo sobre mente, transformação e espiritualidade no{" "}
+          {t.video.textBefore}
           <Link
             href="https://www.youtube.com/@athanismesmerri"
             target="_blank"
@@ -40,10 +43,9 @@ export function VideoSection() {
           >
             YouTube
           </Link>
-          .
+          {t.video.textAfter}
         </motion.p>
 
-        {/* Vídeo com áudio e controles nativos */}
         <motion.div variants={fadeUp} className="mt-10">
           <div className="overflow-hidden rounded-2xl border border-white/10 shadow-2xl shadow-black/40">
             <video
@@ -55,7 +57,6 @@ export function VideoSection() {
             </video>
           </div>
 
-          {/* Botão YouTube */}
           <div className="mt-5 flex justify-center">
             <Link
               href={VIDEO_URL}
@@ -66,7 +67,7 @@ export function VideoSection() {
               <svg viewBox="0 0 24 24" fill="currentColor" className="size-4 text-red-500">
                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
               </svg>
-              Assista no YouTube
+              {t.video.watchBtn}
             </Link>
           </div>
         </motion.div>
@@ -75,7 +76,7 @@ export function VideoSection() {
           variants={fadeUp}
           className="mt-6 text-center text-zinc-500"
         >
-          Inscreva-se para conteúdo semanal sobre mente, hipnose, espiritualidade e transformação.
+          {t.video.subscribe}
         </motion.p>
       </motion.div>
     </section>
