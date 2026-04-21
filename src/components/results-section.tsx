@@ -27,7 +27,7 @@ export function ResultsSection() {
   const highlights = [
     { title: "MindCodex Method™", desc: t.results.mindcodexDesc, links: highlightLinks[0] },
     { title: t.results.famoors.title, desc: t.results.famoors.desc, links: highlightLinks[1] },
-    { title: t.results.formation.title, desc: t.results.formation.desc, links: highlightLinks[2] },
+    ...(t.results.formation.title ? [{ title: t.results.formation.title, desc: t.results.formation.desc, links: [] as typeof highlightLinks[0] }] : []),
   ];
 
   const mindcodexLinkLabels: Record<string, string> = {
@@ -71,7 +71,7 @@ export function ResultsSection() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={{ visible: { transition: { staggerChildren: 0.12, delayChildren: 0.2 } } }}
-          className="mt-16 grid gap-6 md:grid-cols-3"
+          className={`mt-16 grid gap-6 ${highlights.length === 2 ? 'md:grid-cols-2 max-w-2xl' : 'md:grid-cols-3'}`}
         >
           {highlights.map((h) => (
             <motion.div

@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { Language, languageNames } from "@/lib/i18n";
 import { useT } from "@/contexts/language-context";
 
-const languages: Language[] = ["pt", "en", "fr", "de", "es", "lb"];
+const languages: Language[] = ["pt", "en", "fr", "de"];
 
 export function LanguageSwitcher() {
   const { lang, setLang } = useT();

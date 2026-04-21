@@ -18,15 +18,27 @@ const unbounded = Unbounded({
 });
 
 export const metadata: Metadata = {
-  title: "Athanís Mesmerri — Empresária, Escritora & Parapsicóloga",
+  title: "Athanís Mesmerri — Autora, Criadora & Empresária",
   description:
-    "Fundadora da Famoors, criadora do MindCodex Method™ e autora de múltiplos livros na Amazon. Integrando ciência, comportamento e espiritualidade para transformar mentes e vidas.",
+    "Escritora, parapsicóloga e fundadora da Famoors. Criadora do Mindcodex Method — obra literária, métodos e projetos entre a mente, a escrita e a transformação humana.",
   openGraph: {
-    title: "Athanís Mesmerri — Empresária, Escritora & Parapsicóloga",
+    title: "Athanís Mesmerri — Autora, Criadora & Empresária",
     description:
-      "Fundadora da Famoors, criadora do MindCodex Method™ e autora de múltiplos livros na Amazon. Integrando ciência, comportamento e espiritualidade para transformar mentes e vidas.",
+      "Escritora, parapsicóloga e fundadora da Famoors. Criadora do Mindcodex Method — obra literária, métodos e projetos entre a mente, a escrita e a transformação humana.",
     type: "website",
+    siteName: "Athanís Mesmerri",
   },
+  keywords: [
+    "Athanís Mesmerri",
+    "Famoors",
+    "Mindcodex Method",
+    "escritora",
+    "parapsicóloga",
+    "desenvolvimento pessoal",
+    "hipnose clínica",
+    "livros Amazon",
+    "transformação humana",
+  ],
 };
 
 export default function RootLayout({

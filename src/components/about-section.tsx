@@ -73,19 +73,17 @@ export function AboutSection() {
           {t.about.p4Post}
         </motion.p>
 
-        <motion.p
-          variants={fadeUp}
-          className="mt-6 text-xl leading-relaxed text-zinc-300 md:text-2xl"
-        >
-          {t.about.p5}
-        </motion.p>
+        {t.about.p5 && (
+          <motion.p variants={fadeUp} className="mt-6 text-xl leading-relaxed text-zinc-300 md:text-2xl">
+            {t.about.p5}
+          </motion.p>
+        )}
 
-        <motion.p
-          variants={fadeUp}
-          className="mt-6 text-xl leading-relaxed text-zinc-300 md:text-2xl"
-        >
-          {t.about.p6}
-        </motion.p>
+        {t.about.p6 && (
+          <motion.p variants={fadeUp} className="mt-6 text-xl leading-relaxed text-zinc-300 md:text-2xl">
+            {t.about.p6}
+          </motion.p>
+        )}
       </motion.div>
     </section>
   );

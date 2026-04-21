@@ -1,5 +1,5 @@
 {
-  "name": "oleeeg-landing",
+  "name": "chegora",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.90.0",
+    "@supabase/ssr": "^0.10.2",
+    "@supabase/supabase-js": "^2.104.0",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
     "clsx": "^2.1.1",
@@ -16,6 +19,8 @@
     "next": "^15.3.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "resend": "^6.12.0",
+    "stripe": "^22.0.2",
     "tailwind-merge": "^3.2.0"
   },
   "devDependencies": {
